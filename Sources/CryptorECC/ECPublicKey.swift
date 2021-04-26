@@ -59,7 +59,7 @@ public class ECPublicKey {
     #else
     typealias NativeKey = SecKey
     #endif
-    let nativeKey: NativeKey
+    public let nativeKey: NativeKey
     
     /// The public key represented as a PEM String.
     public let pemString: String
