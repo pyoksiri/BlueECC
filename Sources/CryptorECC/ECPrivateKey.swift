@@ -57,7 +57,7 @@ public class ECPrivateKey {
         typealias NativeKey = OpaquePointer?
         deinit { EC_KEY_free(.make(optional: self.nativeKey)) }
     #else
-        typealias NativeKey = SecKey
+        public typealias NativeKey = SecKey
     #endif
     public let nativeKey: NativeKey
     let pubKeyBytes: Data
